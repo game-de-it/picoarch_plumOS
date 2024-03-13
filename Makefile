@@ -24,7 +24,7 @@ LDFLAGS    = -L$(SYSROOT)/usr/lib -lc -ldl -lgcc -lm -lSDL -lasound -lpng -lz -W
 #CORES = beetle-pce-fast bluemsx fceumm fmsx gambatte gme gpsp mame2000 mednafen_ngp mednafen_wswan pcsx_rearmed picodrive pokemini quicknes smsplus-gx snes9x2002 snes9x2005 stella2014 $(EXTRA_CORES)
 
 ### RGB30 plumOS CORES list
-CORES = gpsp beetle-pce-fast fceumm fmsx gambatte mednafen_ngp mednafen_wswan picodrive pokemini quicknes smsplus-gx snes9x2010 snes9x fake-08 dosbox-pure mgba gearsystem parallel-n64 
+CORES = gpsp beetle-pce-fast fceumm fmsx gambatte mednafen_ngp mednafen_wswan picodrive pokemini quicknes smsplus-gx snes9x2010 fake-08 dosbox-pure mgba gearsystem parallel-n64 
 
 #CORES = gpsp
 #CORES = beetle-pce-fast
