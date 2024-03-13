@@ -23,7 +23,7 @@ static const struct in_default_bind in_sdl_defbinds[] = {
 	{ SDLK_BACKSPACE, IN_BINDTYPE_PLAYER12, RETRO_DEVICE_ID_JOYPAD_R },
 	{ SDLK_q,         IN_BINDTYPE_PLAYER12, RETRO_DEVICE_ID_JOYPAD_L2 },
 	{ SDLK_BACKSLASH, IN_BINDTYPE_PLAYER12, RETRO_DEVICE_ID_JOYPAD_R2 },
-	{ SDLK_ESCAPE,    IN_BINDTYPE_EMU, EACTION_MENU },
+	{ SDLK_BACKQUOTE,    IN_BINDTYPE_EMU, EACTION_MENU },
 	{ 0, 0, 0 }
 };
 
@@ -39,7 +39,7 @@ const struct menu_keymap in_sdl_key_map[] =
 	{ SDLK_LSHIFT,    PBTN_MA3 },
 	{ SDLK_TAB,       PBTN_L },
 	{ SDLK_BACKSPACE, PBTN_R },
-	{ SDLK_ESCAPE,    PBTN_MENU },
+	{ SDLK_BACKQUOTE,    PBTN_MENU },
 };
 
 const struct menu_keymap in_sdl_joy_map[] =
@@ -55,8 +55,14 @@ const struct menu_keymap in_sdl_joy_map[] =
 };
 
 static const struct mod_keymap in_sdl_mod_keymap[] = {
-	{ SDLK_TAB,       SDLK_q },          /* mod+L1 = L2 */
-	{ SDLK_BACKSPACE, SDLK_BACKSLASH },  /* mod+R1 = R2 */
+//	{ SDLK_TAB,       SDLK_q },          /* mod+L1 = L2 */
+//	{ SDLK_BACKSPACE, SDLK_BACKSLASH },  /* mod+R1 = R2 */
+	{ SDLK_RETURN, SDLK_BACKQUOTE },  /* SELECT+START = menu */
+	{ SDLK_LSHIFT, SDLK_0 },  /* SELECT+R1 BTN = HotKey0 */
+	{ SDLK_RSHIFT, SDLK_1 },  /* SELECT+L1 BTN = HotKey1 */
+	{ SDLK_HOME,   SDLK_2 },  /* SELECT+R2 BTN = HotKey2 */
+	{ SDLK_END,    SDLK_3 },  /* SELECT+L2 BTN = HotKey3 */
+	{ SDLK_c,      SDLK_4 },  /* SELECT+X BTN  = HotKey4 */
 };
 
 static const struct in_pdata in_sdl_platform_data = {
