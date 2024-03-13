@@ -4,7 +4,7 @@
 #ifdef FUNKEY_S
 #define SCREEN_WIDTH 240
 #else
-#define SCREEN_WIDTH 320
+#define SCREEN_WIDTH 720
 #endif
 
 #if SCREEN_WIDTH == 240
@@ -13,7 +13,7 @@
 #define HUD_LEN 41
 #endif
 
-#define SCREEN_HEIGHT 240
+#define SCREEN_HEIGHT 720
 #define SCREEN_BPP 2
 #define SCREEN_PITCH (SCREEN_BPP * SCREEN_WIDTH)
 
