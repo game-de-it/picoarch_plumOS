@@ -565,7 +565,8 @@ static const char h_scale_filter[]        =
 static const char *men_scale_size[] = { "Native", "Aspect", "Full", "Crop", NULL};
 #endif
 
-static const char *men_scale_filter[] = { "Nearest", "Sharp", "Smooth", NULL};
+//static const char *men_scale_filter[] = { "Nearest", "Sharp", "Smooth", NULL};
+static const char *men_scale_filter[] = { "Nearest", NULL};
 
 static menu_entry e_menu_video_options[] =
 {
