@@ -23,11 +23,42 @@ LDFLAGS    = -L$(SYSROOT)/usr/lib -lc -ldl -lgcc -lm -lSDL -lasound -lpng -lz -W
 
 #CORES = beetle-pce-fast bluemsx fceumm fmsx gambatte gme gpsp mame2000 mednafen_ngp mednafen_wswan pcsx_rearmed picodrive pokemini quicknes smsplus-gx snes9x2002 snes9x2005 stella2014 $(EXTRA_CORES)
 
+### RGB30 plumOS CORES list
+CORES = gpsp beetle-pce-fast fceumm fmsx gambatte mednafen_ngp mednafen_wswan picodrive pokemini quicknes smsplus-gx snes9x2010 snes9x fake-08 dosbox-pure mgba gearsystem parallel-n64 
+
+#CORES = gpsp
+#CORES = beetle-pce-fast
+#CORES = fceumm
+#CORES = fmsx
+#CORES = gambatte
+#CORES = mednafen_ngp
+#CORES = mednafen_wswan
+#CORES = pcsx_rearmed
+#CORES = picodrive
+#CORES = pokemini
+#CORES = quicknes
+#CORES = smsplus-gx
+#CORES = snes9x2010
+#CORES = snes9x
+#CORES = fake-08
+#CORES = dosbox-pure
+#CORES = mgba
+#CORES = gearsystem
+#CORES = parallel-n64
+
 ifneq ($(platform), trimui)
 #CORES := $(CORES) dosbox-pure fake-08 fbalpha2012 snes9x2005_plus snes9x2010
 endif
 
 # CORES = dosbox-pure
+
+parallel-n64_REPO = https://github.com/libretro/parallel-n64
+parallel-n64_MAKEFILE = Makefile
+parallel-n64_CORE = parallel_n64_libretro.so
+
+gearsystem_REPO = https://github.com/drhelius/Gearsystem
+gearsystem_BUILD_PATH = gearsystem/platforms/libretro
+gearsystem_MAKEFILE = Makefile
 
 beetle-pce-fast_REPO = https://github.com/libretro/beetle-pce-fast-libretro
 beetle-pce-fast_CORE = mednafen_pce_fast_libretro.so
