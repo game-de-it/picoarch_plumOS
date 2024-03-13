@@ -1,0 +1,21 @@
+--- b/Makefile	2024-03-12 01:49:48.918009647 +0900
++++ a/Makefile	2024-03-12 01:49:21.237823183 +0900
+@@ -134,6 +134,18 @@
+       GL_LIB := -lGL
+    endif
+ 
++# RGB30 plumOS
++ifeq ($(platform), unix)
++      CPUFLAGS += -DNO_ASM -DARM -D__arm__ -DARM_ASM -D__NEON_OPT -DNOSSE
++      CPUFLAGS += -mcpu=cortex-a53 -mfpu=neon-fp-armv8 -mfloat-abi=hard
++      HAVE_NEON = 1
++      TARGET := $(TARGET_NAME)_libretro.so
++      GLES = 1
++      WITH_DYNAREC=arm
++      CPUFLAGS += -DARM_FIX
++      GL_LIB := -lGLESv2
++endif
++
+    # Raspberry Pi
+    ifneq (,$(findstring rpi,$(platform)))
+       GLES = 1
