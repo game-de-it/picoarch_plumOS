@@ -68,7 +68,7 @@ static void toggle_fast_forward(int force_off)
 				CORE_OVERRIDE(override->fast_forward, type_value, "fixed_interval"));
 			options_set_value(
 				interval_key,
-				CORE_OVERRIDE(override->fast_forward, interval_value, "5"));
+				CORE_OVERRIDE(override->fast_forward, interval_value, "2"));
 		}
 
 		limit_frames_was = limit_frames;
