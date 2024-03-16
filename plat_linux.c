@@ -33,8 +33,6 @@ const struct menu_keymap in_sdl_key_map[] =
 	{ SDLK_DOWN,      PBTN_DOWN },
 	{ SDLK_LEFT,      PBTN_LEFT },
 	{ SDLK_RIGHT,     PBTN_RIGHT },
-	{ SDLK_SPACE,     PBTN_MOK },
-	{ SDLK_LCTRL,     PBTN_MBACK },
 	{ SDLK_LALT,      PBTN_MA2 },
 	{ SDLK_LSHIFT,    PBTN_MA3 },
 	{ SDLK_TAB,       PBTN_L },
@@ -44,10 +42,10 @@ const struct menu_keymap in_sdl_key_map[] =
 
 const struct menu_keymap in_sdl_joy_map[] =
 {
-	{ SDLK_UP,    PBTN_UP },
-	{ SDLK_DOWN,  PBTN_DOWN },
-	{ SDLK_LEFT,  PBTN_LEFT },
-	{ SDLK_RIGHT, PBTN_RIGHT },
+    { SDLK_WORLD_13, PBTN_UP },
+    { SDLK_WORLD_14, PBTN_DOWN },
+    { SDLK_WORLD_15, PBTN_LEFT },
+    { SDLK_WORLD_16, PBTN_RIGHT },
 	{ SDLK_WORLD_1, PBTN_MOK },
 	{ SDLK_WORLD_0, PBTN_MBACK },
 	{ SDLK_WORLD_2, PBTN_MA2 },
