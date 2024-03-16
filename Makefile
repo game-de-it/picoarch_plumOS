@@ -26,6 +26,7 @@ LDFLAGS    = -L$(SYSROOT)/usr/lib -lc -ldl -lgcc -lm -lSDL -lasound -lpng -lz -W
 ### RGB30 plumOS CORES list
 CORES = gpsp beetle-pce-fast fceumm fmsx gambatte mednafen_ngp mednafen_wswan picodrive pokemini quicknes smsplus-gx snes9x2010 fake-08 dosbox-pure mgba gearsystem parallel-n64 
 
+#CORES = nestopia
 #CORES = gpsp
 #CORES = beetle-pce-fast
 #CORES = fceumm
@@ -51,6 +52,10 @@ ifneq ($(platform), trimui)
 endif
 
 # CORES = dosbox-pure
+
+nestopia_REPO = https://github.com/libretro/nestopia
+nestopia_MAKEFILE = Makefile
+nestopia_BUILD_PATH = nestopia/libretro
 
 parallel-n64_REPO = https://github.com/libretro/parallel-n64
 parallel-n64_MAKEFILE = Makefile
